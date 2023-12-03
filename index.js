@@ -23,7 +23,8 @@ var leftClick =document.getElementById("slider-left-activate")
 var rightClick =document.getElementById("slider-right-activate")
 
 rightClick.addEventListener("click",function(event){
-        sliderimage.scrollLeft +=200;
+    sliderimage.style.scrollBehavior="auto"   
+    sliderimage.scrollLeft +=200;
 })
 
 leftClick.addEventListener("click",function(){
