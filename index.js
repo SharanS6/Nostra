@@ -11,24 +11,25 @@ menu.addEventListener("click",function(){
 close.addEventListener("click",function(){
     slide.style.left="-50%";
 })
+// offer close
+var closeOffer=document.getElementById("close-offer")
+var offer=document.querySelector(".nav-offer")
+closeOffer.addEventListener("click",function(){
+    offer.style.display="none"
+})
 
 var sliderimage=document.querySelector(".head-slider");
 var leftClick =document.getElementById("slider-left-activate")
 var rightClick =document.getElementById("slider-right-activate")
-var slidermargin=0
-rightClick.addEventListener("click",function(){
-    // slidermargin+=100
-    // if(slidermargin>200){
-    //     slidermargin=0
-    //     slidermargin.style.marginLeft="0"
-    // }
-    // else
-    // {
-    //     sliderimage.style.marginLeft="-"+slidermargin+"vw";
-    // }
-    
+
+rightClick.addEventListener("click",function(event){
+        sliderimage.scrollLeft +=200;
 })
 
+leftClick.addEventListener("click",function(){
+    sliderimage.style.scrollBehavior="auto"
+    sliderimage.scrollLeft -=200;
+})
 // leftClick.addEventListener("click",function(){
     
 //     if(slidermargin==0)

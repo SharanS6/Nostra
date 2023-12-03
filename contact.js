@@ -11,3 +11,10 @@ menu.addEventListener("click",function(){
 close.addEventListener("click",function(){
     slide.style.left="-50%";
 })
+
+// offer close
+var closeOffer=document.getElementById("close-offer")
+var offer=document.querySelector(".nav-offer")
+closeOffer.addEventListener("click",function(){
+    offer.style.display="none"
+})
