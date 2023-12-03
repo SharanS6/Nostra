@@ -63,3 +63,60 @@ if (this.checked) {
     }
 }
 })
+party.addEventListener("change",function(){
+    
+    // console.log("hi")
+    if (this.checked) {
+        for(i=0;i<products.length;i=i+1)
+        {
+            products[i].style.display="none"
+            // 
+        }
+        for(k=0;k<products2.length;k=k+1)
+        {
+            products2[k].style.display="block"
+        }
+        for(j=0;j<products1;j=j+1)
+        {
+            products1[i].style.display="none"
+        }
+      }
+       else {
+        for(var i=0;i<products.length;i=i+1)
+        {
+            products[i].style.display="block"
+        }
+        for(k=0;k<products2.length;k=k+1)
+        {
+            products1[k].style.display="block"
+        }
+    }
+    })
+
+//search bar
+var search=document.getElementById("search-bar")
+var container=document.querySelector(".collection-shirts");
+var shirts=container.querySelectorAll("div")
+
+search.addEventListener("keyup",function(){
+    var entervalue=event.target.value.toUpperCase()
+    console.log(entervalue)
+    for(var i=0;i<shirts.length;i=i+1)
+    {
+        var matchingvalue=shirts[i].querySelector("h1").textContent
+        if(matchingvalue.toUpperCase().indexOf(entervalue)<0)
+        {
+            shirts[i].style.display="none"
+        }
+        else
+        {
+            shirts[i].style.display="block"
+
+        }       
+     }
+        
+    }
+)
+    
+
+console.log(shirts)
